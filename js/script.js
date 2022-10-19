@@ -14,6 +14,7 @@ let h2 = document.querySelector("h2");
 let firstNumber = 10;
 
 let numbers = [];
+let userNumbers = [];
 
 while (numbers.length < 5) {
     let rndNumber = getRndInteger(1, 100);
@@ -22,10 +23,15 @@ while (numbers.length < 5) {
     }
 }
 
+console.log(numbers);
+
 h2.innerHTML = numbers;
 
 const timer = setInterval(timerFunction, 1000);
 
+const timerQuestion = setTimeout(question, (firstNumber + 3) * 1000);
+
+console.log(userNumbers);
 
 
 
@@ -41,7 +47,12 @@ function timerFunction() {
     }
 }
 
-
+function question() {
+    for (let i = numbers.length; i > 0; i--) {
+        let numberUser = parseInt(prompt(`Dimmi il ${i} numero`));
+        userNumbers.push(numberUser);
+    }
+}
 
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
