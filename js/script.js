@@ -11,7 +11,8 @@
 
 let h1 = document.querySelector("h1");
 let h2 = document.querySelector("h2");
-let firstNumber = 10;
+let msg = document.querySelector(".msg");
+let firstNumber = 30;
 
 let numbers = [];
 let userNumbers = [];
@@ -33,8 +34,12 @@ const timerQuestion = setTimeout(question, (firstNumber + 3) * 1000);
 
 console.log(userNumbers);
 
+const resultGame = setTimeout(comparing, (firstNumber + 4) * 1000);
 
 
+
+
+console.log(userNumbers[0]);
 
 
 // FUNCTIONS--------------------------------------
@@ -52,6 +57,27 @@ function question() {
         let numberUser = parseInt(prompt(`Dimmi il ${i} numero`));
         userNumbers.push(numberUser);
     }
+}
+
+function comparing() {
+    for (let k = 0; k < numbers.length; k++) {
+        if (userNumbers[0] == numbers[k]) {
+            msg.innerHTML += ` ${userNumbers[0]}`
+        } 
+        if (userNumbers[1] == numbers[k]) {
+            msg.innerHTML += ` ${userNumbers[1]}`
+        }
+        if (userNumbers[2] == numbers[k]) {
+            msg.innerHTML += ` ${userNumbers[2]}`
+        }
+        if (userNumbers[3] == numbers[k]) {
+            msg.innerHTML += ` ${userNumbers[3]}`
+        }
+        if (userNumbers[4] == numbers[k]) {
+            msg.innerHTML += ` ${userNumbers[4]}`
+        }
+    }
+    msg.classList.remove("d-none");
 }
 
 function getRndInteger(min, max) {
