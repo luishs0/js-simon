@@ -30,11 +30,11 @@ h2.innerHTML = numbers;
 
 const timer = setInterval(timerFunction, 1000);
 
-const timerQuestion = setTimeout(question, (firstNumber + 3) * 1000);
+const timerQuestion = setTimeout(question, (firstNumber + 4) * 1000);
 
 console.log(userNumbers);
 
-const resultGame = setTimeout(comparing, (firstNumber + 4) * 1000);
+const resultGame = setTimeout(comparing, (firstNumber + 5) * 1000);
 
 
 

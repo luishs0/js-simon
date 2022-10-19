@@ -4,6 +4,25 @@
     box-sizing: border-box;
 }
 
+.container {
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+    margin: 3rem auto;
+    padding: .5rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
 .d-block {
     display: block;
 }
